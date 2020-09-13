@@ -13,6 +13,7 @@ app.get('/', async (req, res) => {
 })
 
 app.post('/command', async(req, res) => {
+    console.log(req.body)
     let command = req.body.command
     if(await bulbTalker.isReady())
     {
