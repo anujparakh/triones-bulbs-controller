@@ -17,11 +17,12 @@ app.post('/command', async(req, res) => {
     let command = req.body.command
     if(await bulbTalker.isReady())
     {
-        console.log('Command is: ' + command)
         await bulbTalker.sendBulbMessage(command)
-        return res.send('Command Sent')
+        console.log('Command Sent')
+        return res.status(200).send('Command Sent')
     }
-    return res.send('Bulbs Not Ready')
+    console.log('Bulbs Not Ready')
+    return res.status(204).send('Bulbs Not Ready')
 
 })
 

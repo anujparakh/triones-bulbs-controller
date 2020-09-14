@@ -55,7 +55,6 @@ async function isReady() {
             ++numConnected
         }
     }
-    console.log('Num: ' + numConnected)
     return (numConnected == config.numBulbs)
 }
 

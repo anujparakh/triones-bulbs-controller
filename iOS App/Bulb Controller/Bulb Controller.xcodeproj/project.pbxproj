@@ -7,15 +7,74 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B41E6DE250E97AE003D7F5E /* lightbulb.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B41E6DD250E97AE003D7F5E /* lightbulb.png */; };
+		2B41E6DF250E97AE003D7F5E /* lightbulb.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B41E6DD250E97AE003D7F5E /* lightbulb.png */; };
+		2B41E6E1250E981B003D7F5E /* BulbOnIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B41E6E0250E981B003D7F5E /* BulbOnIntentHandler.swift */; };
+		2B41E6E2250E981B003D7F5E /* BulbOnIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B41E6E0250E981B003D7F5E /* BulbOnIntentHandler.swift */; };
+		2B41E6E4250E9E29003D7F5E /* BulbOffIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B41E6E3250E9E29003D7F5E /* BulbOffIntentHandler.swift */; };
+		2B41E6E5250E9E29003D7F5E /* BulbOffIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B41E6E3250E9E29003D7F5E /* BulbOffIntentHandler.swift */; };
+		2B41E6ED250ECED9003D7F5E /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B41E6EC250ECED9003D7F5E /* NotificationCenter.framework */; };
+		2B41E6F0250ECED9003D7F5E /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B41E6EF250ECED9003D7F5E /* TodayViewController.swift */; };
+		2B41E6F3250ECED9003D7F5E /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B41E6F1250ECED9003D7F5E /* MainInterface.storyboard */; };
+		2B41E6F7250ECED9003D7F5E /* Bulbs Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2B41E6EA250ECED9003D7F5E /* Bulbs Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2B41E6FB250ED621003D7F5E /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B41E6EF250ECED9003D7F5E /* TodayViewController.swift */; };
+		2B41E6FC250ED622003D7F5E /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B41E6EF250ECED9003D7F5E /* TodayViewController.swift */; };
+		2B41E6FD250ED628003D7F5E /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B41E6F1250ECED9003D7F5E /* MainInterface.storyboard */; };
+		2B41E6FE250ED629003D7F5E /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B41E6F1250ECED9003D7F5E /* MainInterface.storyboard */; };
 		2BC41365250DF81C00957CC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC41364250DF81C00957CC6 /* AppDelegate.swift */; };
 		2BC41367250DF81C00957CC6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC41366250DF81C00957CC6 /* SceneDelegate.swift */; };
 		2BC41369250DF81C00957CC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC41368250DF81C00957CC6 /* ViewController.swift */; };
 		2BC4136C250DF81C00957CC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BC4136A250DF81C00957CC6 /* Main.storyboard */; };
 		2BC4136E250DF82200957CC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BC4136D250DF82200957CC6 /* Assets.xcassets */; };
 		2BC41371250DF82200957CC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BC4136F250DF82200957CC6 /* LaunchScreen.storyboard */; };
+		2BC41379250DFF2300957CC6 /* Bulbs.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 2BC41378250DFF2300957CC6 /* Bulbs.intentdefinition */; };
+		2BC41381250E007800957CC6 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC41380250E007800957CC6 /* IntentHandler.swift */; };
+		2BC41385250E007800957CC6 /* Bulbs On.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2BC4137E250E007800957CC6 /* Bulbs On.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2BC4138A250E00CB00957CC6 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC41380250E007800957CC6 /* IntentHandler.swift */; };
+		2BC4138B250E00D200957CC6 /* Bulbs.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 2BC41378250DFF2300957CC6 /* Bulbs.intentdefinition */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		2B41E6F5250ECED9003D7F5E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BC41359250DF81C00957CC6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B41E6E9250ECED9003D7F5E;
+			remoteInfo = "Bulbs Widget";
+		};
+		2BC41383250E007800957CC6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BC41359250DF81C00957CC6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2BC4137D250E007800957CC6;
+			remoteInfo = "Bulbs On";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2BC41389250E007800957CC6 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				2B41E6F7250ECED9003D7F5E /* Bulbs Widget.appex in Embed App Extensions */,
+				2BC41385250E007800957CC6 /* Bulbs On.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		2B41E6DD250E97AE003D7F5E /* lightbulb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lightbulb.png; path = ../../../Icon/lightbulb.png; sourceTree = "<group>"; };
+		2B41E6E0250E981B003D7F5E /* BulbOnIntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulbOnIntentHandler.swift; sourceTree = "<group>"; };
+		2B41E6E3250E9E29003D7F5E /* BulbOffIntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulbOffIntentHandler.swift; sourceTree = "<group>"; };
+		2B41E6EA250ECED9003D7F5E /* Bulbs Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Bulbs Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B41E6EC250ECED9003D7F5E /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		2B41E6EF250ECED9003D7F5E /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		2B41E6F2250ECED9003D7F5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		2B41E6F4250ECED9003D7F5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BC41361250DF81C00957CC6 /* Bulb Controller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bulb Controller.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BC41364250DF81C00957CC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BC41366250DF81C00957CC6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,10 +83,29 @@
 		2BC4136D250DF82200957CC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2BC41370250DF82200957CC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2BC41372250DF82200957CC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BC41378250DFF2300957CC6 /* Bulbs.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Bulbs.intentdefinition; sourceTree = "<group>"; };
+		2BC4137E250E007800957CC6 /* Bulbs On.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Bulbs On.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BC41380250E007800957CC6 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
+		2BC41382250E007800957CC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2B41E6E7250ECED9003D7F5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B41E6ED250ECED9003D7F5E /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2BC4135E250DF81C00957CC6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BC4137B250E007800957CC6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,10 +115,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B41E6EB250ECED9003D7F5E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2B41E6EC250ECED9003D7F5E /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2B41E6EE250ECED9003D7F5E /* Bulbs Widget */ = {
+			isa = PBXGroup;
+			children = (
+				2B41E6EF250ECED9003D7F5E /* TodayViewController.swift */,
+				2B41E6F1250ECED9003D7F5E /* MainInterface.storyboard */,
+				2B41E6F4250ECED9003D7F5E /* Info.plist */,
+			);
+			path = "Bulbs Widget";
+			sourceTree = "<group>";
+		};
 		2BC41358250DF81C00957CC6 = {
 			isa = PBXGroup;
 			children = (
 				2BC41363250DF81C00957CC6 /* Bulb Controller */,
+				2BC4137F250E007800957CC6 /* Bulbs On */,
+				2B41E6EE250ECED9003D7F5E /* Bulbs Widget */,
+				2B41E6EB250ECED9003D7F5E /* Frameworks */,
 				2BC41362250DF81C00957CC6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +148,8 @@
 			isa = PBXGroup;
 			children = (
 				2BC41361250DF81C00957CC6 /* Bulb Controller.app */,
+				2BC4137E250E007800957CC6 /* Bulbs On.appex */,
+				2B41E6EA250ECED9003D7F5E /* Bulbs Widget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,7 +157,9 @@
 		2BC41363250DF81C00957CC6 /* Bulb Controller */ = {
 			isa = PBXGroup;
 			children = (
+				2B41E6DD250E97AE003D7F5E /* lightbulb.png */,
 				2BC41364250DF81C00957CC6 /* AppDelegate.swift */,
+				2BC41378250DFF2300957CC6 /* Bulbs.intentdefinition */,
 				2BC41366250DF81C00957CC6 /* SceneDelegate.swift */,
 				2BC41368250DF81C00957CC6 /* ViewController.swift */,
 				2BC4136A250DF81C00957CC6 /* Main.storyboard */,
@@ -67,9 +170,37 @@
 			path = "Bulb Controller";
 			sourceTree = "<group>";
 		};
+		2BC4137F250E007800957CC6 /* Bulbs On */ = {
+			isa = PBXGroup;
+			children = (
+				2BC41380250E007800957CC6 /* IntentHandler.swift */,
+				2B41E6E0250E981B003D7F5E /* BulbOnIntentHandler.swift */,
+				2B41E6E3250E9E29003D7F5E /* BulbOffIntentHandler.swift */,
+				2BC41382250E007800957CC6 /* Info.plist */,
+			);
+			path = "Bulbs On";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		2B41E6E9250ECED9003D7F5E /* Bulbs Widget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B41E6F8250ECED9003D7F5E /* Build configuration list for PBXNativeTarget "Bulbs Widget" */;
+			buildPhases = (
+				2B41E6E6250ECED9003D7F5E /* Sources */,
+				2B41E6E7250ECED9003D7F5E /* Frameworks */,
+				2B41E6E8250ECED9003D7F5E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Bulbs Widget";
+			productName = "Bulbs Widget";
+			productReference = 2B41E6EA250ECED9003D7F5E /* Bulbs Widget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		2BC41360250DF81C00957CC6 /* Bulb Controller */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2BC41375250DF82200957CC6 /* Build configuration list for PBXNativeTarget "Bulb Controller" */;
@@ -77,15 +208,35 @@
 				2BC4135D250DF81C00957CC6 /* Sources */,
 				2BC4135E250DF81C00957CC6 /* Frameworks */,
 				2BC4135F250DF81C00957CC6 /* Resources */,
+				2BC41389250E007800957CC6 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				2BC41384250E007800957CC6 /* PBXTargetDependency */,
+				2B41E6F6250ECED9003D7F5E /* PBXTargetDependency */,
 			);
 			name = "Bulb Controller";
 			productName = "Bulb Controller";
 			productReference = 2BC41361250DF81C00957CC6 /* Bulb Controller.app */;
 			productType = "com.apple.product-type.application";
+		};
+		2BC4137D250E007800957CC6 /* Bulbs On */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BC41386250E007800957CC6 /* Build configuration list for PBXNativeTarget "Bulbs On" */;
+			buildPhases = (
+				2BC4137A250E007800957CC6 /* Sources */,
+				2BC4137B250E007800957CC6 /* Frameworks */,
+				2BC4137C250E007800957CC6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Bulbs On";
+			productName = "Bulbs On";
+			productReference = 2BC4137E250E007800957CC6 /* Bulbs On.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -93,11 +244,17 @@
 		2BC41359250DF81C00957CC6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1130;
+				LastSwiftUpdateCheck = 1170;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Anuj Parakh";
 				TargetAttributes = {
+					2B41E6E9250ECED9003D7F5E = {
+						CreatedOnToolsVersion = 11.7;
+					};
 					2BC41360250DF81C00957CC6 = {
+						CreatedOnToolsVersion = 11.3;
+					};
+					2BC4137D250E007800957CC6 = {
 						CreatedOnToolsVersion = 11.3;
 					};
 				};
@@ -116,37 +273,104 @@
 			projectRoot = "";
 			targets = (
 				2BC41360250DF81C00957CC6 /* Bulb Controller */,
+				2BC4137D250E007800957CC6 /* Bulbs On */,
+				2B41E6E9250ECED9003D7F5E /* Bulbs Widget */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2B41E6E8250ECED9003D7F5E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B41E6F3250ECED9003D7F5E /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2BC4135F250DF81C00957CC6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				2BC41371250DF82200957CC6 /* LaunchScreen.storyboard in Resources */,
+				2B41E6FD250ED628003D7F5E /* MainInterface.storyboard in Resources */,
+				2B41E6DE250E97AE003D7F5E /* lightbulb.png in Resources */,
 				2BC4136E250DF82200957CC6 /* Assets.xcassets in Resources */,
 				2BC4136C250DF81C00957CC6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BC4137C250E007800957CC6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B41E6DF250E97AE003D7F5E /* lightbulb.png in Resources */,
+				2B41E6FE250ED629003D7F5E /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2B41E6E6250ECED9003D7F5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B41E6F0250ECED9003D7F5E /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2BC4135D250DF81C00957CC6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				2BC41369250DF81C00957CC6 /* ViewController.swift in Sources */,
+				2BC4138A250E00CB00957CC6 /* IntentHandler.swift in Sources */,
+				2B41E6E1250E981B003D7F5E /* BulbOnIntentHandler.swift in Sources */,
+				2B41E6E4250E9E29003D7F5E /* BulbOffIntentHandler.swift in Sources */,
+				2B41E6FB250ED621003D7F5E /* TodayViewController.swift in Sources */,
 				2BC41365250DF81C00957CC6 /* AppDelegate.swift in Sources */,
+				2BC41379250DFF2300957CC6 /* Bulbs.intentdefinition in Sources */,
 				2BC41367250DF81C00957CC6 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BC4137A250E007800957CC6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BC4138B250E00D200957CC6 /* Bulbs.intentdefinition in Sources */,
+				2B41E6E5250E9E29003D7F5E /* BulbOffIntentHandler.swift in Sources */,
+				2B41E6FC250ED622003D7F5E /* TodayViewController.swift in Sources */,
+				2BC41381250E007800957CC6 /* IntentHandler.swift in Sources */,
+				2B41E6E2250E981B003D7F5E /* BulbOnIntentHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		2B41E6F6250ECED9003D7F5E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2B41E6E9250ECED9003D7F5E /* Bulbs Widget */;
+			targetProxy = 2B41E6F5250ECED9003D7F5E /* PBXContainerItemProxy */;
+		};
+		2BC41384250E007800957CC6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2BC4137D250E007800957CC6 /* Bulbs On */;
+			targetProxy = 2BC41383250E007800957CC6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		2B41E6F1250ECED9003D7F5E /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B41E6F2250ECED9003D7F5E /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		2BC4136A250DF81C00957CC6 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -166,6 +390,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		2B41E6F9250ECED9003D7F5E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T628V6ULQ5;
+				INFOPLIST_FILE = "Bulbs Widget/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.anuj.Bulb-Controller.Bulbs-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2B41E6FA250ECED9003D7F5E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T628V6ULQ5;
+				INFOPLIST_FILE = "Bulbs Widget/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.anuj.Bulb-Controller.Bulbs-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		2BC41373250DF82200957CC6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -283,6 +547,7 @@
 		2BC41376250DF82200957CC6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T628V6ULQ5;
@@ -301,6 +566,7 @@
 		2BC41377250DF82200957CC6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T628V6ULQ5;
@@ -316,9 +582,56 @@
 			};
 			name = Release;
 		};
+		2BC41387250E007800957CC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T628V6ULQ5;
+				INFOPLIST_FILE = "Bulbs On/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.anuj.Bulb-Controller.Bulbs-On";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2BC41388250E007800957CC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T628V6ULQ5;
+				INFOPLIST_FILE = "Bulbs On/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.anuj.Bulb-Controller.Bulbs-On";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2B41E6F8250ECED9003D7F5E /* Build configuration list for PBXNativeTarget "Bulbs Widget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B41E6F9250ECED9003D7F5E /* Debug */,
+				2B41E6FA250ECED9003D7F5E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2BC4135C250DF81C00957CC6 /* Build configuration list for PBXProject "Bulb Controller" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -333,6 +646,15 @@
 			buildConfigurations = (
 				2BC41376250DF82200957CC6 /* Debug */,
 				2BC41377250DF82200957CC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BC41386250E007800957CC6 /* Build configuration list for PBXNativeTarget "Bulbs On" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BC41387250E007800957CC6 /* Debug */,
+				2BC41388250E007800957CC6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
