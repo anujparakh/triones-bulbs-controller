@@ -39,7 +39,7 @@ class BulbOnIntentHandler : NSObject, BulbsOnIntentHandling
     // Sends a Bulb request with given command and handler
     func sendCommand(_ command: String, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void)
     {
-        let url = URL(string: "http://192.168.86.20:3000/command")
+        let url = URL(string: "http://virus.lan:3000/command")
         guard let requestUrl = url else { fatalError() }
         
         // Prepare URL Request Object
