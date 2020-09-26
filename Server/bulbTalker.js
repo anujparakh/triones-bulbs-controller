@@ -37,7 +37,7 @@ async function connectToBulbs() {
         console.log(bulbName + ' Connected!')
         try {
             const services = await bulbPeripherals[bulbName].peripheral.discoverServicesAsync([config.identifiers.writeServiceUUID]);
-            console.log('Found service!')
+            console.log(services)
             const characteristics = await services[0].discoverCharacteristicsAsync()
             bulbPeripherals[bulbName].writeCharacteristic = characteristics[0]
             console.log('Saved Characteristic!')
