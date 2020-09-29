@@ -38,6 +38,7 @@ discoverCallback = async (peripheral) => {
                 console.log('--------------------------------')
                 if(bulbPeripherals.length < config.numBulbs)
                     noble.startScanning([], false)
+
             })
         })
 
