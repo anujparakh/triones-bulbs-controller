@@ -1,6 +1,8 @@
 {
     "numBulbs": 2,
     "identifiers": {
-        "writeServiceUUID": "FFD5"
+        "writeServiceUUID": "ffd5",
+        "writeCharacteristicUUID": "ffd9",
+        "readCharacteristicUUID": "ffd4"
     }
 }
