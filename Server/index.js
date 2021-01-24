@@ -1,4 +1,4 @@
-const bulbTalker = require('./blueberry')
+const bulbTalker = require('./bulbTalker')
 
 const express = require('express')
 const app = express()
@@ -39,6 +39,30 @@ async function parseAndSendCommand(command)
             toSend = "56000000FF0FAA"
             currentState.brightness = 256
         }
+        else if(color == "blue")
+        {
+
+        }
+        else if(color == "light blue")
+        {
+
+        }
+        else if(color == "yellow")
+        {
+
+        }
+        else if(color == "green")
+        {
+
+        }
+        else if(color == "red")
+        {
+
+        }
+        else if(color == "pink")
+        {
+
+        }
         else
         {
             toSend = "56" + command.color + "00F0AA"
@@ -64,6 +88,79 @@ app.post('/command', async(req, res) => {
     console.log('Bulbs Not Ready')
     return res.status(204).send('Bulbs Not Ready')
 
+})
+
+app.post('/power', async(req, res) => {
+    console.log(req.body)
+    let value = req.body.value
+    if(await bulbTalker.isReady())
+    {
+        var command = {}
+        if(value == "on")
+            command.power = true
+        else
+            command.power = false
+        parseAndSendCommand(command)
+        return res.status(200).send('Power Set')
+    }
+    console.log('Bulbs Not Ready')
+    return res.status(204).send('Bulbs Not Ready')
+
+})
+
+app.post('/brightness', async(req, res) => {
+    console.log(req.body)
+    let value = req.body.value
+    if(await bulbTalker.isReady())
+    {
+        var command = {}
+        command.brightness = parseInt(value)
+        parseAndSendCommand(command)
+        return res.status(200).send('Brightness Set')
+    }
+    console.log('Bulbs Not Ready')
+    return res.status(204).send('Bulbs Not Ready')
+
+})
+
+app.post('/color', async(req, res) => {
+    console.log(req.body)
+    let value = req.body.value
+    if(await bulbTalker.isReady())
+    {
+        var command = {}
+        command.color = value
+        parseAndSendCommand(command)
+        return res.status(200).send('Color Set')
+    }
+    console.log('Bulbs Not Ready')
+    return res.status(204).send('Bulbs Not Ready')
+
+})
+
+app.post('/brightness', async(req, res) => {
+    console.log(req.body)
+    let value = req.body.value
+    if(await bulbTalker.isReady())
+    {
+        var command = {}
+        if(value == "on")
+            command.power = true
+        else
+            command.power = false
+        return res.status(200).send('Power Set')
+    }
+    console.log('Bulbs Not Ready')
+    return res.status(204).send('Bulbs Not Ready')
+
+})
+
+app.get('/brightness', async(req, res) => {
+    return res.status(200).send(currentState.brightness)
+})
+
+app.get('/power', async(req, res) => {
+    return res.status(200).send(currentState.power)
 })
 
 app.listen(port, () => {

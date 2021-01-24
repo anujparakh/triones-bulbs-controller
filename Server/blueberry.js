@@ -4,6 +4,7 @@ const noble = require('noble');
 const config = require('./config.json')
 let bulbPeripherals = {}
 let bulbNames = []
+let bulbsDone = 0
 
 discoverCallback = async (peripheral) => {
     if (peripheral.advertisement.localName == null)
@@ -25,6 +26,7 @@ discoverCallback = async (peripheral) => {
                 return
             }
             console.log('Connected to ' + peripheralName)
+
             peripheral.discoverAllServicesAndCharacteristics((error, services, characteristics) => {
                 for(characteristic of characteristics)
                 {
@@ -36,8 +38,11 @@ discoverCallback = async (peripheral) => {
 
                 console.log('Done for bulb: ' + peripheralName)
                 console.log('--------------------------------')
-                if(bulbPeripherals.length < config.numBulbs)
+                bulbsDone += 1
+                if(bulbsDone < config.numBulbs)
                     noble.startScanning([], false)
+                else
+                    noble.stopScanning()
 
             })
         })
