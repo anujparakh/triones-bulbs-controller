@@ -27,7 +27,7 @@ async function parseAndSendCommand(command)
     // Check if brightness
     else if(command.brightness != null)
     {
-        toSend = "56000000" + command.brightness.toString(16) + "0FAA";
+        toSend = "56000000" + command.brightness.toString(16).padStart(2, '0') + "0FAA";
         currentState.brightness = command.brightness;
     }
     // Check if color
