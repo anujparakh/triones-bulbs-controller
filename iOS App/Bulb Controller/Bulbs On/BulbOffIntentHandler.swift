@@ -7,7 +7,7 @@ class BulbOffIntentHandler : NSObject, BulbsOffIntentHandling
     func handle(intent: BulbsOffIntent, completion: @escaping (BulbsOffIntentResponse) -> Void)
     {
         // Send turn off command
-        sendCommand("CC2433") { (data, response, error) in
+        sendBulbOffMessage() { (data, response, error) in
             // Check for Error
             if let error = error {
                 print("Error in sending command: \(error)")
@@ -20,9 +20,9 @@ class BulbOffIntentHandler : NSObject, BulbsOffIntentHandling
     }
     
     // Sends a Bulb request with given command and handler
-    func sendCommand(_ command: String, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void)
+    func sendBulbOffMessage(completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void)
     {
-        let url = URL(string: "http://blueberrypi:3000/command")
+        let url = URL(string: "\(URL_BASE)power")
         guard let requestUrl = url else { fatalError() }
         
         // Prepare URL Request Object
@@ -30,7 +30,7 @@ class BulbOffIntentHandler : NSObject, BulbsOffIntentHandling
         request.httpMethod = "POST"
         
         // HTTP Request Parameters which will be sent in HTTP Request Body
-        let postString = "command=" + command;
+        let postString = "value=off"
         // Set HTTP Request Body
         request.httpBody = postString.data(using: String.Encoding.utf8);
         // Perform HTTP Request

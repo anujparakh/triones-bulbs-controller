@@ -49,7 +49,7 @@ class TodayViewController: UIViewController, NCWidgetProviding
         if sender.isOn
         {
             // Send On Message
-            sendCommand("CC2333") { (data, response, err) in
+            updatePower(true) { (data, response, err) in
                 // TODO: Check error message
                 
                 print("Turned On!")
@@ -59,7 +59,7 @@ class TodayViewController: UIViewController, NCWidgetProviding
         else
         {
             // Send Off Message
-            sendCommand("CC2433") { (data, response, err) in
+            updatePower(false) { (data, response, err) in
                 // TODO: Check error message
                 
                 print("Turned Off!")
@@ -78,12 +78,11 @@ class TodayViewController: UIViewController, NCWidgetProviding
             brightnessControl.selectedSegmentIndex = 0
             return
         }
-        let brightnessHex = String(format:"%02X", lastBrightness)
+
         // Default color intensity
-        sendCommand("56000000" + brightnessHex + "0FAA") { (data, response, err) in
+        updateBrightness(lastBrightness) { (data, response, err) in
             // TODO: Check error message
             
-            print("Set brightness to \(brightnessHex)")
             
         }
     }
@@ -97,12 +96,9 @@ class TodayViewController: UIViewController, NCWidgetProviding
             brightnessControl.selectedSegmentIndex = 2
             return
         }
-        let brightnessHex = String(format:"%02X", lastBrightness)
-        // Default color intensity
-        sendCommand("56000000" + brightnessHex + "0FAA") { (data, response, err) in
+        updateBrightness(lastBrightness) { (data, response, err) in
             // TODO: Check error message
             
-            print("Set brightness to \(brightnessHex)")
             
         }
         
@@ -132,7 +128,7 @@ class TodayViewController: UIViewController, NCWidgetProviding
         }
         
         // Default color intensity
-        sendCommand("56000000" + brightnessHex + "0FAA") { (data, response, err) in
+        updateBrightness(lastBrightness) { (data, response, err) in
             // TODO: Check error message
             
             print("Set brightness to \(brightnessHex)")
@@ -167,7 +163,7 @@ class TodayViewController: UIViewController, NCWidgetProviding
     // Sends a Bulb request with given command and handler
     func sendCommand(_ command: String, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void)
     {
-        let url = URL(string: "http://blueberrypi:3000/command")
+        let url = URL(string: "\(URL_BASE)command")
         guard let requestUrl = url else { fatalError() }
         
         // Prepare URL Request Object
@@ -176,6 +172,42 @@ class TodayViewController: UIViewController, NCWidgetProviding
         
         // HTTP Request Parameters which will be sent in HTTP Request Body
         let postString = "command=" + command;
+        // Set HTTP Request Body
+        request.httpBody = postString.data(using: String.Encoding.utf8);
+        // Perform HTTP Request
+        let task = URLSession.shared.dataTask(with: request, completionHandler: completionHandler)
+        task.resume()
+    }
+    
+    func updateBrightness(_ brightness: Int, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void)
+    {
+        let url = URL(string: "\(URL_BASE)brightness")
+        guard let requestUrl = url else { fatalError() }
+        
+        // Prepare URL Request Object
+        var request = URLRequest(url: requestUrl)
+        request.httpMethod = "POST"
+        
+        // HTTP Request Parameters which will be sent in HTTP Request Body
+        let postString = "value=\(brightness)"
+        // Set HTTP Request Body
+        request.httpBody = postString.data(using: String.Encoding.utf8);
+        // Perform HTTP Request
+        let task = URLSession.shared.dataTask(with: request, completionHandler: completionHandler)
+        task.resume()
+    }
+    
+    func updatePower(_ power: Bool, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void)
+    {
+        let url = URL(string: "\(URL_BASE)power")
+        guard let requestUrl = url else { fatalError() }
+        
+        // Prepare URL Request Object
+        var request = URLRequest(url: requestUrl)
+        request.httpMethod = "POST"
+        
+        // HTTP Request Parameters which will be sent in HTTP Request Body
+        let postString = "value=\(power ? "on" : "off")"
         // Set HTTP Request Body
         request.httpBody = postString.data(using: String.Encoding.utf8);
         // Perform HTTP Request

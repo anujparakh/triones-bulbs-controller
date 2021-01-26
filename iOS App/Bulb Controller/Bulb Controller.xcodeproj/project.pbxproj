@@ -19,6 +19,9 @@
 		2B41E6FC250ED622003D7F5E /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B41E6EF250ECED9003D7F5E /* TodayViewController.swift */; };
 		2B41E6FD250ED628003D7F5E /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B41E6F1250ECED9003D7F5E /* MainInterface.storyboard */; };
 		2B41E6FE250ED629003D7F5E /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B41E6F1250ECED9003D7F5E /* MainInterface.storyboard */; };
+		2B87919525BDD53A00AC711A /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B87919425BDD53A00AC711A /* Utility.swift */; };
+		2B87919625BDD53A00AC711A /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B87919425BDD53A00AC711A /* Utility.swift */; };
+		2B87919725BDD53A00AC711A /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B87919425BDD53A00AC711A /* Utility.swift */; };
 		2BC08B7C251A808E006C1D7B /* lightbulb.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BC08B7B251A808E006C1D7B /* lightbulb.png */; };
 		2BC41365250DF81C00957CC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC41364250DF81C00957CC6 /* AppDelegate.swift */; };
 		2BC41367250DF81C00957CC6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC41366250DF81C00957CC6 /* SceneDelegate.swift */; };
@@ -73,6 +76,7 @@
 		2B41E6EF250ECED9003D7F5E /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		2B41E6F2250ECED9003D7F5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		2B41E6F4250ECED9003D7F5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B87919425BDD53A00AC711A /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		2BC08B7B251A808E006C1D7B /* lightbulb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lightbulb.png; path = ../../../Media/Icon/lightbulb.png; sourceTree = "<group>"; };
 		2BC41361250DF81C00957CC6 /* Bulb Controller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bulb Controller.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BC41364250DF81C00957CC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -157,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				2BC08B7B251A808E006C1D7B /* lightbulb.png */,
+				2B87919425BDD53A00AC711A /* Utility.swift */,
 				2BC41364250DF81C00957CC6 /* AppDelegate.swift */,
 				2BC41378250DFF2300957CC6 /* Bulbs.intentdefinition */,
 				2BC41366250DF81C00957CC6 /* SceneDelegate.swift */,
@@ -315,6 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B41E6F0250ECED9003D7F5E /* TodayViewController.swift in Sources */,
+				2B87919725BDD53A00AC711A /* Utility.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +336,7 @@
 				2BC41365250DF81C00957CC6 /* AppDelegate.swift in Sources */,
 				2BC41379250DFF2300957CC6 /* Bulbs.intentdefinition in Sources */,
 				2BC41367250DF81C00957CC6 /* SceneDelegate.swift in Sources */,
+				2B87919525BDD53A00AC711A /* Utility.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +349,7 @@
 				2B41E6FC250ED622003D7F5E /* TodayViewController.swift in Sources */,
 				2BC41381250E007800957CC6 /* IntentHandler.swift in Sources */,
 				2B41E6E2250E981B003D7F5E /* BulbOnIntentHandler.swift in Sources */,
+				2B87919625BDD53A00AC711A /* Utility.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

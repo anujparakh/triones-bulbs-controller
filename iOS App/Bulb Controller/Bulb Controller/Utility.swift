@@ -7,3 +7,6 @@
 //
 
 import Foundation
+
+let URL_BASE = "http://blackberrypi.local:3000/"
+

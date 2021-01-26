@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func buttonClicked(_ sender: Any) {
-        let url = URL(string: "http://blueberrypi:3000/command")
+        let url = URL(string: "\(URL_BASE)command")
         guard let requestUrl = url else { fatalError() }
 
         // Prepare URL Request Object

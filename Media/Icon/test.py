@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 
 # Read Image
-image = cv2.imread('./forcesensor.jpg', cv2.IMREAD_COLOR)
+image = cv2.imread('./test.png', cv2.IMREAD_COLOR)
 
 # Add alpha channel
 b_channel, g_channel, r_channel = cv2.split(image)
@@ -14,8 +14,8 @@ nrows, ncols = image.shape [:-1]
 for i in range(0, nrows):
     for j in range(0, ncols):
         # If pixel is matching color, make transparent
-        if (image[i][j][:-1] >= 235).all():
+        if (image[i][j][0:3] != [0, 0, 0]).all():
             image[i][j][3] = 0
 
 # Write modified image
-cv2.imwrite('./transparentbulb.png', image)
+cv2.imwrite('./fixed.png', image)

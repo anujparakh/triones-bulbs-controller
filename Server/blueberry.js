@@ -67,3 +67,13 @@ module.exports.sendBulbMessage = async (hexMessage) => {
         bulbPeripherals[bulbName].writeCharacteristic.write(toWrite, false)
     }
 }
+
+module.exports.sendBulbSeparateMessages = async (hexMessages) => {
+
+    var i = 0;
+    for (bulbName of bulbNames) {
+        let toWrite = Buffer.from(hexMessages[i], 'hex')
+        bulbPeripherals[bulbName].writeCharacteristic.write(toWrite, false)
+        ++i;
+    }
+}

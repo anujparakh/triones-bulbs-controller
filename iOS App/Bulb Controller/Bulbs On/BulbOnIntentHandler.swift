@@ -7,7 +7,7 @@ class BulbOnIntentHandler : NSObject, BulbsOnIntentHandling
     func handle(intent: BulbsOnIntent, completion: @escaping (BulbsOnIntentResponse) -> Void)
     {
         // Send turn on command
-        sendCommand("CC2333") { (data, response, error) in
+        sendBulbOnMessage() { (data, response, error) in
             // Check for Error
             if let error = error {
                 print("Error in sending command: \(error)")
@@ -20,7 +20,7 @@ class BulbOnIntentHandler : NSObject, BulbsOnIntentHandling
 //            }
             
             // Send Brightness Command
-            self.sendCommand("56DDDDDDFF0FAA") {
+            self.sendMaxBrightnessMessage() {
                 
                 (data, response, error) in
                 // Check for Error
@@ -36,22 +36,36 @@ class BulbOnIntentHandler : NSObject, BulbsOnIntentHandling
         }
     }
     
-    // Sends a Bulb request with given command and handler
-    func sendCommand(_ command: String, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void)
+    func sendBulbOnMessage(_ completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void)
     {
-        let url = URL(string: "http://blueberrypi:3000/command")
+        let url = URL(string: "\(URL_BASE)power")
         guard let requestUrl = url else { fatalError() }
-        
         // Prepare URL Request Object
         var request = URLRequest(url: requestUrl)
         request.httpMethod = "POST"
         
         // HTTP Request Parameters which will be sent in HTTP Request Body
-        let postString = "command=" + command;
-        // Set HTTP Request Body
+        let postString = "value=on";
         request.httpBody = postString.data(using: String.Encoding.utf8);
         // Perform HTTP Request
         let task = URLSession.shared.dataTask(with: request, completionHandler: completionHandler)
         task.resume()
     }
+    
+    func sendMaxBrightnessMessage(_ completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void)
+    {
+        let url = URL(string: "\(URL_BASE)brightness")
+        guard let requestUrl = url else { fatalError() }
+        // Prepare URL Request Object
+        var request = URLRequest(url: requestUrl)
+        request.httpMethod = "POST"
+        
+        // HTTP Request Parameters which will be sent in HTTP Request Body
+        let postString = "value=255";
+        request.httpBody = postString.data(using: String.Encoding.utf8);
+        // Perform HTTP Request
+        let task = URLSession.shared.dataTask(with: request, completionHandler: completionHandler)
+        task.resume()
+    }
+    
 }
