@@ -16,6 +16,7 @@ let currentState = {
 }
 
 function getColorMessage(color) {
+    toSend = ""
     if (color == "default") {
         toSend = "56000000FF0FAA"
         currentState.brightness = 256
@@ -44,6 +45,8 @@ function getColorMessage(color) {
     else {
         toSend = "56" + color + "00F0AA"
     }
+
+    return toSend
 }
 
 async function parseAndSendCommand(command) {
