@@ -61,8 +61,8 @@ async function parseAndSendCommand(command) {
     // Check if color
     else if (command.color1 != null && command.color2 != null) {
         let messages = []
-        messages.append(getColorMessage(command.color1))
-        messages.append(getColorMessage(command.color2))
+        messages.push(getColorMessage(command.color1))
+        messages.push(getColorMessage(command.color2))
         await bulbTalker.sendBulbSeparateMessages(messages)
         return;
     }
