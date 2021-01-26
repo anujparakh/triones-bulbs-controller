@@ -61,6 +61,10 @@ async function parseAndSendCommand(command) {
         toSend = "56000000" + command.brightness.toString(16).padStart(2, '0') + "0FAA";
         currentState.brightness = command.brightness;
     }
+    else if(command.color != null)
+    {
+        toSend = getColorMessage(command.color)
+    }
     // Check if color
     else if (command.color1 != null && command.color2 != null) {
         let messages = []
@@ -125,10 +129,23 @@ app.post('/color', async (req, res) => {
     console.log(req.body)
     if (await bulbTalker.isReady()) {
         var command = {}
+        command.color = req.body.color
+        parseAndSendCommand(command)
+        return res.status(200).send('Color Set')
+    }
+    console.log('Bulbs Not Ready')
+    return res.status(204).send('Bulbs Not Ready')
+
+})
+
+app.post('/colors', async (req, res) => {
+    console.log(req.body)
+    if (await bulbTalker.isReady()) {
+        var command = {}
         command.color1 = req.body.color1
         command.color2 = req.body.color2
         parseAndSendCommand(command)
-        return res.status(200).send('Color Set')
+        return res.status(200).send('ColorS Set')
     }
     console.log('Bulbs Not Ready')
     return res.status(204).send('Bulbs Not Ready')
